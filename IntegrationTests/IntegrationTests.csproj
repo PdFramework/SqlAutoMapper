@@ -36,9 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PeinearyDevelopment.Framework.Data">
-      <HintPath>..\Data\bin\Debug\PeinearyDevelopment.Framework.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Runtime.Serialization" />
@@ -71,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{50CC9376-DD52-4251-8B2A-A6A90E24F32E}</Project>
+      <Project>{50cc9376-dd52-4251-8b2a-a6a90e24f32e}</Project>
       <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
