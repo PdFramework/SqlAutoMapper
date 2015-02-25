@@ -1,9 +1,9 @@
-﻿namespace PeinearyDevelopment.Framework.Data
+﻿namespace PeinearyDevelopment.Framework.Data.ObjectBuilder
 {
-    using System;
-    using System.Data;
+	using System;
+	using System.Data;
 
-    internal static class DataRecordExtenstions
+	internal static class DataRecordExtensions
     {
         internal static bool HasColumn(this IDataRecord dataRecord, string columnName)
         {

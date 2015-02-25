@@ -41,16 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataRecordExtenstions.cs" />
-    <Compile Include="ResultSetsFlattener.cs" />
-    <Compile Include="ObjectBuilder.cs" />
-    <Compile Include="ObjectBuilderBase.cs" />
-    <Compile Include="ObjectBuilderBaseExtensions.cs" />
+    <Compile Include="AsyncSqlAutoMapperExtensions.cs" />
+    <Compile Include="ObjectBuilder\AsyncObjectBuilderExtensions.cs" />
+    <Compile Include="ObjectBuilder\DataRecordExtensions.cs" />
+    <Compile Include="ObjectBuilder\AsyncObjectBuilder.cs" />
+    <Compile Include="ISqlAutoMapper.cs" />
+    <Compile Include="ObjectBuilder\ObjectBuilderExtensions.cs" />
+    <Compile Include="SavedToReevaluate\ResultSetsFlattener.cs" />
+    <Compile Include="ObjectBuilder\ObjectBuilder.cs" />
+    <Compile Include="ObjectBuilder\ObjectBuilderBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlAutoMapper.cs" />
     <Compile Include="SqlAutoMapperExtensions.cs" />
     <Compile Include="SqlCommandData.cs" />
     <Compile Include="SqlCommandDataExtensions.cs" />
+    <Compile Include="ObjectBuilder\TypedObjectBuilderBase.cs" />
     <Compile Include="ValueTypeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
