@@ -7,25 +7,25 @@
 
 	internal class AsyncObjectBuilder<T> : TypedObjectBuilderBase<T>
     {
-			internal IEnumerable<Task<object>> MappedProperties { get; set; }
-			internal Dictionary<string, Func<Task<object>>> ReaderToObjectMapper { get; set; }
-			internal Func<Task<object>[], Task<object>> ObjectConstructWithAssignments { get; set; }
+		internal IEnumerable<Task<object>> MappedProperties { get; set; }
+		internal Dictionary<string, Func<Task<object>>> ReaderToObjectMapper { get; set; }
+		internal Func<Task<object>[], Task<object>> ObjectConstructWithAssignments { get; set; }
 			
-			internal AsyncObjectBuilder()
+		internal AsyncObjectBuilder()
         {
-						ObjectConstructWithAssignments = async (tObjPropertyValues) =>
+			ObjectConstructWithAssignments = async (tObjPropertyValues) =>
             {
                 var tObj = ObjectConstructor();
 
                 for (var i = 0; i < tObjPropertyValues.Count(); i++)
                 {
-									ObjectPropertySettingActions[i](tObj, await tObjPropertyValues[i]);
+					ObjectPropertySettingActions[i](tObj, await tObjPropertyValues[i]);
                 }
 
                 return tObj;
             };
 
-						ReaderToObjectMapper = new Dictionary<string, Func<Task<object>>>();
+		    ReaderToObjectMapper = new Dictionary<string, Func<Task<object>>>();
         }
     }
 }

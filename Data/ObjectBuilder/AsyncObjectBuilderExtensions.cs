@@ -8,9 +8,9 @@
 
 	internal static class AsyncObjectBuilderExtensions
 	{
-		internal static object CreateMappedObject<T>(this AsyncObjectBuilder<T> objBuilder, IEnumerable<Task<object>> objs)
+		internal async static Task<object> CreateMappedObject<T>(this AsyncObjectBuilder<T> objBuilder, IEnumerable<Task<object>> objs)
 		{
-			return objBuilder.ObjectConstructWithAssignments(objs.ToArray());
+			return await objBuilder.ObjectConstructWithAssignments(objs.ToArray());
 		}
 
 		internal static void PopulateReaderToObjectMapperAsync<T>(this AsyncObjectBuilder<T> objBuilder, SqlDataReader reader)

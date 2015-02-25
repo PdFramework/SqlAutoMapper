@@ -105,7 +105,7 @@
 
 						await reader.ReadAsync();
 
-						obj = CreateMappedObject(reader, objectBuilder);
+						obj = await CreateMappedObject(reader, objectBuilder);
 					}
 				}
 			}
@@ -133,7 +133,7 @@
 
 						while (await reader.ReadAsync())
 						{
-							objs.Add(CreateMappedObject(reader, objectBuilder));
+							objs.Add(await CreateMappedObject(reader, objectBuilder));
 						}
 					}
 				}
@@ -150,9 +150,9 @@
 			return objectBuilder;
 		}
 
-		private static T CreateMappedObject<T>(DbDataReader reader, AsyncObjectBuilder<T> objectBuilder) where T : class
+		private static async Task<T> CreateMappedObject<T>(DbDataReader reader, AsyncObjectBuilder<T> objectBuilder) where T : class
 		{
-			return reader.HasRows ? (T) objectBuilder.CreateMappedObject(objectBuilder.MappedProperties) : null;
+			return reader.HasRows ? (T) await objectBuilder.CreateMappedObject(objectBuilder.MappedProperties) : null;
 		}
 	}
 }
