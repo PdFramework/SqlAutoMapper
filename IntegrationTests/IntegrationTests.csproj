@@ -54,12 +54,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="IntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultValueTests.cs" />
-    <Compile Include="Temp_Individual.cs" />
-    <Compile Include="TestCategory.cs" />
-    <Compile Include="TestCategoryWithNestedCategory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
