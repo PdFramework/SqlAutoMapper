@@ -58,11 +58,6 @@
     <Compile Include="ResultValueTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{50cc9376-dd52-4251-8b2a-a6a90e24f32e}</Project>
       <Name>Data</Name>
