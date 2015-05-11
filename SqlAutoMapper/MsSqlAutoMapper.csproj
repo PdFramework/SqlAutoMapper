@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50CC9376-DD52-4251-8B2A-A6A90E24F32E}</ProjectGuid>
+    <ProjectGuid>{53740CB2-5663-44A8-B32B-793865B13601}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PeinearyDevelopment.Framework.Data</RootNamespace>
-    <AssemblyName>PeinearyDevelopment.Framework.Data</AssemblyName>
+    <RootNamespace>PeinearyDevelopment.Framework.Data.MsSql</RootNamespace>
+    <AssemblyName>PeinearyDevelopment.Framework.Data.MsSql</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,25 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbAutoMapper.cs" />
-    <Compile Include="DbAutoMapperExtensions.cs" />
-    <Compile Include="DbCommandData.cs" />
-    <Compile Include="DbCommandDataExtensions.cs" />
-    <Compile Include="IDbAutoMapper.cs" />
-    <Compile Include="IDbCommandData.cs" />
-    <Compile Include="ObjectBuilder\AsyncObjectBuilderExtensions.cs" />
-    <Compile Include="ObjectBuilder\DataRecordExtensions.cs" />
-    <Compile Include="ObjectBuilder\AsyncObjectBuilder.cs" />
-    <Compile Include="ObjectBuilder\ObjectBuilderExtensions.cs" />
-    <Compile Include="SavedToReevaluate\ResultSetsFlattener.cs" />
-    <Compile Include="ObjectBuilder\ObjectBuilder.cs" />
-    <Compile Include="ObjectBuilder\ObjectBuilderBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ObjectBuilder\TypedObjectBuilderBase.cs" />
-    <Compile Include="ValueTypeHelper.cs" />
+    <Compile Include="MsSqlAutoMapper.cs" />
+    <Compile Include="MsSqlAutoMapperExtensions.cs" />
+    <Compile Include="MsSqlCommandData.cs" />
+    <Compile Include="MsSqlCommandDataExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data.nuspec" />
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{50CC9376-DD52-4251-8B2A-A6A90E24F32E}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

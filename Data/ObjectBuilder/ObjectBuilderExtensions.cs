@@ -2,7 +2,7 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Data.SqlClient;
+	using System.Data.Common;
 	using System.Linq;
 
 	internal static class ObjectBuilderExtensions
@@ -12,7 +12,7 @@
 			return objBuilder.ObjectConstructWithAssignments(objs.ToArray());
 		}
 
-		internal static void PopulateReaderToObjectMapper<T>(this ObjectBuilder<T> objBuilder, SqlDataReader reader)
+		internal static void PopulateReaderToObjectMapper<T>(this ObjectBuilder<T> objBuilder, DbDataReader reader)
 		{
 			foreach (var property in objBuilder.ObjectProperties)
 			{

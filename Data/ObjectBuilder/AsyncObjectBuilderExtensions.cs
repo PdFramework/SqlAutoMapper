@@ -2,7 +2,7 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Data.SqlClient;
+	using System.Data.Common;
 	using System.Linq;
 	using System.Threading.Tasks;
 
@@ -13,7 +13,7 @@
 			return await objBuilder.ObjectConstructWithAssignments(objs.ToArray());
 		}
 
-		internal static void PopulateReaderToObjectMapperAsync<T>(this AsyncObjectBuilder<T> objBuilder, SqlDataReader reader)
+		internal static void PopulateReaderToObjectMapperAsync<T>(this AsyncObjectBuilder<T> objBuilder, DbDataReader reader)
 		{
 			foreach (var property in objBuilder.ObjectProperties)
 			{

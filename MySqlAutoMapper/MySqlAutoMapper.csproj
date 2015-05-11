@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50CC9376-DD52-4251-8B2A-A6A90E24F32E}</ProjectGuid>
+    <ProjectGuid>{845C367B-206F-420B-A1DC-DCC86A0FA841}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PeinearyDevelopment.Framework.Data</RootNamespace>
-    <AssemblyName>PeinearyDevelopment.Framework.Data</AssemblyName>
+    <RootNamespace>PeinearyDevelopment.Framework.Data.MySql</RootNamespace>
+    <AssemblyName>PeinearyDevelopment.Framework.Data.MySql</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,8 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,25 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbAutoMapper.cs" />
-    <Compile Include="DbAutoMapperExtensions.cs" />
-    <Compile Include="DbCommandData.cs" />
-    <Compile Include="DbCommandDataExtensions.cs" />
-    <Compile Include="IDbAutoMapper.cs" />
-    <Compile Include="IDbCommandData.cs" />
-    <Compile Include="ObjectBuilder\AsyncObjectBuilderExtensions.cs" />
-    <Compile Include="ObjectBuilder\DataRecordExtensions.cs" />
-    <Compile Include="ObjectBuilder\AsyncObjectBuilder.cs" />
-    <Compile Include="ObjectBuilder\ObjectBuilderExtensions.cs" />
-    <Compile Include="SavedToReevaluate\ResultSetsFlattener.cs" />
-    <Compile Include="ObjectBuilder\ObjectBuilder.cs" />
-    <Compile Include="ObjectBuilder\ObjectBuilderBase.cs" />
+    <Compile Include="MySqlAutoMapper.cs" />
+    <Compile Include="MySqlCommandData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ObjectBuilder\TypedObjectBuilderBase.cs" />
-    <Compile Include="ValueTypeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data.nuspec" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{50CC9376-DD52-4251-8B2A-A6A90E24F32E}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
