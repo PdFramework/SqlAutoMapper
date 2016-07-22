@@ -3,7 +3,7 @@
   <metadata>
     <id>PeinearyDevelopment.Framework.Data.MySql</id>
     <title>PeinearyDevelopment.Framework.Data.MySql</title>
-    <version>1.0.0.0</version>
+    <version>$version$</version>
     <authors>PeinearyDevelopment</authors>
     <owners>PeinearyDevelopment</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,6 +17,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\$configuration\PeinearyDevelopment.Framework.Data.MySql.dll" target="lib\net451" />
+    <file src="bin\$configuration$\PeinearyDevelopment.Framework.Data.MySql.dll" target="lib\net451" />
   </files>
 </package>

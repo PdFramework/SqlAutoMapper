@@ -16,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\$configuration\PeinearyDevelopment.Framework.Data.MsSql.dll" target="lib\net451" />
+    <file src="bin\$configuration$\PeinearyDevelopment.Framework.Data.MsSql.dll" target="lib\net451" />
   </files>
 </package>
