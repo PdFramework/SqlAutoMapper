@@ -1,10 +1,10 @@
-﻿namespace PeinearyDevelopment.Framework.Data
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-    public static class ResultSetsFlattener
+namespace PeinearyDevelopment.Framework.Data.SavedToReevaluate
+{
+  public static class ResultSetsFlattener
     {
         public static IEnumerable<TParent> Flatten<TParent, TChild, TCompare>(this IEnumerable<object>[] results, int parentResultSetIndex, Func<TParent, TCompare> parentIdentifier, Action<TParent, TChild> setMappedChildProperty, int childResultSetIndex, Func<TChild, TCompare> childMappingIdentifier)
         {

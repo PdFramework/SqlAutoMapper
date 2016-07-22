@@ -1,15 +1,12 @@
-﻿namespace PeinearyDevelopment.Framework.Data.Postgres
-{
-	using System.Data.Odbc;
-	using Npgsql;
-	using NpgsqlTypes;
-	using System;
-	using System.Collections.Generic;
-	using System.Data;
-	using System.Data.Common;
-	using System.Globalization;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Globalization;
 
-	internal class NpgSqlCommandData : DbCommandData<NpgsqlDbType>
+namespace PeinearyDevelopment.Framework.Data.NpgSql
+{
+  internal class NpgSqlCommandData : DbCommandData<NpgsqlDbType>
 	{
 		//https://github.com/npgsql/npgsql/wiki/User-Manual#user-content-supported-data-types
 		private static readonly Dictionary<string, NpgsqlDbType> NpgsqlCommandMapper = new Dictionary<string, NpgsqlDbType> {

@@ -7,8 +7,8 @@
     <ProjectGuid>{660E4A01-AB12-4A1C-B095-8C7CA7729DFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PeinearyDevelopment.Framework.Data.Postgres</RootNamespace>
-    <AssemblyName>PeinearyDevelopment.Framework.Data.Postgres</AssemblyName>
+    <RootNamespace>PeinearyDevelopment.Framework.Data.NpgSql</RootNamespace>
+    <AssemblyName>PeinearyDevelopment.Framework.Data.NpgSql</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="PeinearyDevelopment.Framework.Data.NpgSql.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">

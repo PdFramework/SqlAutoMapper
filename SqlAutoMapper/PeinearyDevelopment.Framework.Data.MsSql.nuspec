@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PeinearyDevelopment.Framework.Data.MsSql</id>
+    <title>PeinearyDevelopment.Framework.Data.MsSql</title>
+    <version>$version$</version>
+    <authors>PeinearyDevelopment</authors>
+    <owners>PeinearyDevelopment</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extensions to PeinearyDevelopment.Framework.Data for automatic object mapping from MsSql database.</description>
+    <language>en-US</language>
+    <dependencies>
+      <group targetFramework="net451">
+        <dependency id="PeinearyDevelopment.Framework.Data" version="$version$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration\PeinearyDevelopment.Framework.Data.MsSql.dll" target="lib\net451" />
+  </files>
+</package>

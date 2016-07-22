@@ -1,8 +1,6 @@
-﻿namespace PeinearyDevelopment.Framework.Data.Postgres
+﻿namespace PeinearyDevelopment.Framework.Data.NpgSql
 {
-	using NpgsqlTypes;
-
-	public class NpgSqlAutoMapper : DbAutoMapper<NpgsqlDbType>
+  public class NpgSqlAutoMapper : DbAutoMapper<NpgsqlDbType>
 	{
 		#region Properties & Constructors
 		public NpgSqlAutoMapper() : base(new NpgSqlCommandData()) { }

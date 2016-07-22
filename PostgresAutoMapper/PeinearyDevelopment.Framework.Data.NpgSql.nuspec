@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PeinearyDevelopment.Framework.Data.NpgSql</id>
+    <title>PeinearyDevelopment.Framework.Data.NpgSql</title>
+    <version>1.0.0.0</version>
+    <authors>PeinearyDevelopment</authors>
+    <owners>PeinearyDevelopment</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extensions to PeinearyDevelopment.Framework.Data for automatic object mapping from Postgres database.</description>
+    <language>en-US</language>
+    <dependencies>
+      <group targetFramework="net451">
+        <dependency id="PeinearyDevelopment.Framework.Data" version="$version$" />
+        <dependency id="Npgsql" version="2.2.4.3" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration\PeinearyDevelopment.Framework.Data.NpgSql.dll" target="lib\net451" />
+  </files>
+</package>

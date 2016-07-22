@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PeinearyDevelopment.Framework.Data.MsSql;
 using PeinearyDevelopment.Framework.Data.MySql;
-using PeinearyDevelopment.Framework.Data.Postgres;
+using PeinearyDevelopment.Framework.Data.NpgSql;
 
 namespace IntegrationTests
 {
