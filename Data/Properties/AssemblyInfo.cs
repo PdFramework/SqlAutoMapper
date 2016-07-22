@@ -17,4 +17,4 @@ using System.Runtime.InteropServices;
 [assembly: InternalsVisibleTo("PeinearyDevelopment.Framework.Data.MsSql")]
 [assembly: InternalsVisibleTo("PeinearyDevelopment.Framework.Data.Postgres")]
 [assembly: InternalsVisibleTo("PeinearyDevelopment.Framework.Data.MySql")]
-[assembly: InternalsVisibleTo("PeinearyDevelopment.Framework.Data.PgSql")]
+[assembly: InternalsVisibleTo("PeinearyDevelopment.Framework.Data.NpgSql")]

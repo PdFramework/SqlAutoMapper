@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Globalization;
+using Npgsql;
+using NpgsqlTypes;
 
 namespace PeinearyDevelopment.Framework.Data.NpgSql
 {
